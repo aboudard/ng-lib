@@ -2,19 +2,17 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'lib-testlib',
-  template: `
-    <p>
-      testlib component new version !
-    </p>
-  `,
+  template: ` <p>Fixed version of testlib component.</p> `,
   styles: [
-  ]
+    `
+      p {
+        color: blue;
+      }
+    `,
+  ],
 })
 export class TestlibComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }

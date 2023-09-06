@@ -3,14 +3,18 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve testapp",
-    "build": "ng build testapp",
+    "start:app": "ng serve testapp",
+    "build:app": "ng build testapp",
+    "build:lib": "ng build @abo/testlib",
+    "upgrade-version:lib": "cd projects/abo/testlib && npm version patch",
+    "unpublish:lib": "npm unpublish @abo/testlib --registry http://localhost:4873/ --force",
+    "publish:lib": "ng build @abo/testlib && cd dist/abo/testlib && npm publish --registry http://localhost:4873/",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
   "private": true,
   "dependencies": {
-    "@abo/testlib": "^0.0.1",
+    "@abo/testlib": "^0.0.2",
     "@angular/animations": "^14.1.0",
     "@angular/common": "^14.1.0",
     "@angular/compiler": "^14.1.0",
